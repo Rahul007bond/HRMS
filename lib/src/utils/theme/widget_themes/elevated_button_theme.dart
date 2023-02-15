@@ -7,9 +7,9 @@ class HElevatedButtonTheme{
   HElevatedButtonTheme._();
   static final elevatedButtonTheme=ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(35)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           foregroundColor: Colors.white,
-          backgroundColor: const Color(0xffff7849),
+          backgroundColor: Colors.black87,
           //side: BorderSide(color: hSecondaryColor),
           padding: const EdgeInsets.symmetric(vertical: hButtonHeight,)
       )

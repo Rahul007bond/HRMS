@@ -25,7 +25,7 @@ const String hWelcomeSubTitle="Let's help you to manage your work on your mobile
 
 //Login Page
 
-const String hLoginTitle="Welcome Back";
+const String hLoginTitle="Employee! Login";
 const String hLoginSubTitle="Make it work, make it right, make it fast";
 const String hRemember="Remember me?";
 

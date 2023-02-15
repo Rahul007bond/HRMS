@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:hrms/src/features/authentication/screens/forgot_password/forgot_password_mail/forgot_password_mail.dart';
 
 import '../../../../../constants/text_strings.dart';
 import 'forget_password_btn_widget.dart';
@@ -19,9 +22,12 @@ class ForgotPasswordScreen{
               btnIcon: Icons.mail_outline_rounded,
               title: "E-Mail",
               subTitle: hResetViaEmail,
-              onTap: (){},
+              onTap: (){
+                Navigator.pop(context);
+                Get.to(()=>const ForgotPasswordMailScreen());
+              },
             ),
-            SizedBox(height: 30.0,),
+            const SizedBox(height: 30.0,),
             ForgotPasswordBtnWidget(
               btnIcon: Icons.mobile_friendly_rounded,
               title: "Phone",

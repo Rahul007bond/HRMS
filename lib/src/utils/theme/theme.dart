@@ -28,6 +28,15 @@ class HApptheme{
           900:Color(0xffff7849),
 
         }),
+        inputDecorationTheme: InputDecorationTheme(
+
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.black
+            )
+          )
+        ),
+
         outlinedButtonTheme: HOutlinedButtonTheme.outlinedButtonTheme,
         elevatedButtonTheme: HElevatedButtonTheme.elevatedButtonTheme
 

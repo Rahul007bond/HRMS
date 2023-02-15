@@ -15,6 +15,7 @@ class LoginScreen extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
+         // backgroundColor: const Color(0xffff7849),
           body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(hDefaultSize-5),
@@ -26,6 +27,9 @@ class LoginScreen extends StatelessWidget {
                  image:hWelcomeScreenImage,
                  title: hLoginTitle,
                  subTitle: hLoginSubTitle,
+                 crossAxisAlignment: CrossAxisAlignment.center,
+                 heightBetween: hDefaultSize,
+                 imageHeight: 0.4,
 
                ),
 

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../forgot_password/forgot_password_options/forgot_password_model_bottom_sheet.dart';
@@ -10,60 +9,63 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(child: Container(
+    return Form(
+        child: Container(
       padding: const EdgeInsets.symmetric(vertical: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
             decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.person_outline_outlined),
-                labelText: "Email",
-                hintText: "Email",
-                border: OutlineInputBorder()
+              filled: true,
+              prefixIcon: Icon(Icons.person_outline_outlined),
+              labelText: "Email",
+              hintText: "Email",
+              border: OutlineInputBorder(),
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           TextFormField(
             decoration: InputDecoration(
+                filled: true,
                 prefixIcon: const Icon(Icons.password),
                 labelText: "Password",
                 hintText: "Password",
                 border: const OutlineInputBorder(),
                 suffixIcon: IconButton(
-                    onPressed: (){},
-                    icon: const Icon(Icons.remove_red_eye_sharp))
-            ),
+                    onPressed: () {},
+                    icon: const Icon(Icons.remove_red_eye_sharp))),
           ),
-          const SizedBox(height: 10,),
-          Align(alignment: Alignment.centerRight,
+          const SizedBox(
+            height: 10,
+          ),
+          Align(
+            alignment: Alignment.centerRight,
             child: TextButton(
-                onPressed: (){
+                onPressed: () {
                   ForgotPasswordScreen.buildShowModalBottomSheet(context);
                 },
                 child: const Text(
-                    "Forgot Password?"
-                )
-            ),
+                  "Forgot Password?",
+                  style: TextStyle(color: Colors.black45),
+                )),
           ),
-
-            Row(
-              children: [
-
-                Expanded(
-                  child: ElevatedButton(
-                      onPressed: (){},
-                      child: const Text("LOGIN",style: TextStyle(fontFamily: 'tk',fontSize: 20),)
-                  ),
-                ),
-              ],
-            ),
-
+          Row(
+            children: [
+              Expanded(
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "LOGIN",
+                      style: TextStyle(fontFamily: 'tk', fontSize: 20),
+                    )),
+              ),
+            ],
+          ),
         ],
       ),
     ));
   }
-
-
-
 }
