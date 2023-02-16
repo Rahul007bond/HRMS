@@ -42,3 +42,8 @@ const String hForgotPhoneSubTitle="Enter your registered Phone no to receive OTP
 //forgot password via Email
 const String hForgotMailSubTitle="Enter your registered E-Mal to receive OTP.";
 
+//otp screen text
+const String hOtpSubTitle="verification";
+const String hOtpMessage="Enter the verification code sent at";
+
+

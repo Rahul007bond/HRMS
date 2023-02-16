@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:hrms/src/splash.dart';
+import 'package:hrms/src/features/authentication/screens/splash_screen/splash.dart';
 import 'package:hrms/src/utils/theme/theme.dart';
 
 

@@ -1,8 +1,8 @@
 import 'dart:async';
-import './features/authentication/screens/welcome/welcome_screen.dart';
+import '../welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hrms/src/features/authentication/screens/onboarding/on_boarding_screen.dart';
-import '../main.dart';
+import '../../../../../main.dart';
 
 class SplashScreen extends StatefulWidget{
   const SplashScreen({super.key});

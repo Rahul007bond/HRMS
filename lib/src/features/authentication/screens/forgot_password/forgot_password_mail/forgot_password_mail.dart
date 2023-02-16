@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hrms/src/common_widgets/form/form_header_widget.dart';
 import 'package:hrms/src/constants/image_string.dart';
 import 'package:hrms/src/constants/sizes.dart';
 import 'package:hrms/src/constants/text_strings.dart';
+import 'package:hrms/src/features/authentication/screens/forgot_password/forgot_password_otp/otp_screen.dart';
 
 class ForgotPasswordMailScreen extends StatelessWidget {
   const ForgotPasswordMailScreen({super.key});
@@ -24,7 +28,7 @@ class ForgotPasswordMailScreen extends StatelessWidget {
               subTitle: hForgotMailSubTitle,
               crossAxisAlignment: CrossAxisAlignment.center,
               heightBetween: hDefaultSize-10,
-              imageHeight: 0.35,
+              imageHeight: 0.4,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10,),
@@ -39,7 +43,10 @@ class ForgotPasswordMailScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20,),
-                SizedBox(width:double.infinity,child: ElevatedButton(onPressed: (){}, child: Text("Next")))
+                SizedBox(width:double.infinity,child: ElevatedButton(
+                    onPressed: (){
+                        Get.to(()=>const OTPScreen());
+                }, child: Text("NEXT",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),)))
               ],
             ))
           ],

@@ -37,9 +37,11 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.3
-  liquid_swipe:
-  smooth_page_indicator:
-  get:
+  liquid_swipe: ^3.0.0
+  smooth_page_indicator: ^1.0.1
+  get: ^4.6.5
+  flutter_otp_text_field: ^1.1.1
+  http: ^0.13.5
 
 
 
@@ -72,6 +74,7 @@ flutter:
     - assets/images/splash/
     - assets/images/welcome/
     - assets/images/forgot_password/
+    - assets/images/otp_verification/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

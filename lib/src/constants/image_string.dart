@@ -7,3 +7,5 @@ const String hWelcomeScreenImage="assets/images/welcome/login_bg.png";
 
 const String hForgotPasswordImage="assets/images/forgot_password/forgot-removebg-preview.png";
 
+//const String hOtpVerifyImage="assets/images/otp_verification/otp.gif";
+const String hOtpVerifyImage="assets/images/otp_verification/otpimg-removebg-preview.png";

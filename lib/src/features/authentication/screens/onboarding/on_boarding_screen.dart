@@ -54,6 +54,7 @@ class OnBoardingScreen extends StatelessWidget {
             onPressed: ()=> onController.skip(),
             child: const Text("Skip", style: TextStyle(color: Colors.grey),),
           )),
+
           Obx(
             ()=>  Positioned(bottom: 10, child: AnimatedSmoothIndicator( activeIndex: onController.currentPage.value,
             count:3,effect: const WormEffect(
