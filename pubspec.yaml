@@ -42,6 +42,9 @@ dependencies:
   get: ^4.6.5
   flutter_otp_text_field: ^1.1.1
   http: ^0.13.5
+  circular_chart_flutter: ^0.0.2
+  syncfusion_flutter_charts: ^19.1.56
+  percent_indicator: ^4.0.1
 
 
 
@@ -75,6 +78,7 @@ flutter:
     - assets/images/welcome/
     - assets/images/forgot_password/
     - assets/images/otp_verification/
+    - assets/images/home_screen/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:hrms/src/features/home_screen/home_screen.dart';
 
 import '../forgot_password/forgot_password_options/forgot_password_model_bottom_sheet.dart';
 
@@ -56,7 +59,9 @@ class LoginForm extends StatelessWidget {
             children: [
               Expanded(
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(()=>HomeScreen() );
+                    },
                     child: const Text(
                       "LOGIN",
                       style: TextStyle(fontFamily: 'tk', fontSize: 20),
