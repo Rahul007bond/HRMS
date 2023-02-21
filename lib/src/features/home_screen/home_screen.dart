@@ -204,26 +204,24 @@ class _HomeScreen extends State<HomeScreen> {
               margin: EdgeInsets.all(15),
               child: Column(
                 children: [
-                  Container(
-                    child: Card(
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Colors.white, //<-- SEE HERE
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.person_add_alt_1_sharp,
-                              color: Color(0xFF8DAECC),
-                            ),
-                            onPressed: () {},
+                  Card(
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        radius: 30,
+                        backgroundColor: Colors.white, //<-- SEE HERE
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.person_add_alt_1_sharp,
+                            color: Color(0xFF8DAECC),
                           ),
-                        ), //Icon(Icons.pending_actions,size:25,color: Color(0xFFFF7849)),
-                        title: Text(
-                          'Attendance',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold
-                          ),
+                          onPressed: () {},
+                        ),
+                      ), //Icon(Icons.pending_actions,size:25,color: Color(0xFFFF7849)),
+                      title: Text(
+                        'Attendance',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold
                         ),
                       ),
                     ),

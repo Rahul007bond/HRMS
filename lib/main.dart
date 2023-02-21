@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:hrms/src/features/attendance/attendance.dart';
 import 'package:hrms/src/features/authentication/screens/splash_screen/splash.dart';
-import 'package:hrms/src/features/home_screen/home_screen.dart';
+import 'package:hrms/src/features/home_screen/leave.dart';
 import 'package:hrms/src/utils/theme/theme.dart';
 
 
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'HRMS',
       theme: HApptheme.lightTheme,
 
-      home: const Attendance(),
+      home: LeaveScreen(),
     );
   }
 }
