@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
+import '../drawer/custom_drawer.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _HomeScreen();
@@ -15,22 +17,28 @@ class _HomeScreen extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         backgroundColor: Colors.grey.withOpacity(0.1),
+        extendBodyBehindAppBar: true,
         appBar: AppBar(
-          leading: BackButton(),
-          backgroundColor: Color(0xFFFF7849),
           elevation: 0,
+          iconTheme: IconThemeData(color: Colors.white),
+          title: const Text("Dashboard",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+
         ),
+        drawer: const CustomDrawer(),
+
         body: ListView(
+
           children: [
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Row(
-              children: [
+              children: const [
                 SizedBox(width: 10),
                 Text(
-                  'Dashboard',
+                  'Employee Dashboard',
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: Color(0xff38414a),
                   ),
@@ -38,16 +46,7 @@ class _HomeScreen extends State<HomeScreen> {
               ],
             ),
             SizedBox(height: 10),
-            Row(
-              children: [
-                SizedBox(width: 10),
-                Text('DashBoard-> Employee DashBoard',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    )),
-              ],
-            ),
+
             Container(
               color: Colors.white,
               margin: EdgeInsets.all(15),
@@ -58,7 +57,7 @@ class _HomeScreen extends State<HomeScreen> {
                   Row(
                     children: [
                       Container(
-                        child: Text('Tasks'),
+                        child: Text('Tasks',style: TextStyle(fontWeight: FontWeight.bold),),
                         padding: EdgeInsets.only(left: 28),
                       ),
                     ],
@@ -75,7 +74,7 @@ class _HomeScreen extends State<HomeScreen> {
                       style: new TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
-                          color: Colors.lightBlue),
+                          color: Colors.green),
                     ),
                     circularStrokeCap: CircularStrokeCap.square,
                     progressColor: Color(0xFFFF7849),

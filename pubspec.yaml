@@ -44,7 +44,7 @@ dependencies:
   http: ^0.13.5
   circular_chart_flutter: ^0.0.2
   syncfusion_flutter_charts: ^19.1.56
-  percent_indicator: ^4.0.1
+  percent_indicator: ^4.2.2
 
 
 

@@ -23,12 +23,15 @@ class _CustomDrawerState extends State<CustomDrawer> {
         duration: const Duration(milliseconds: 500),
         width: _isCollapsed ? 300 : 70,
         margin: const EdgeInsets.only(bottom: 10, top: 10),
-        decoration: const BoxDecoration(
+
+        decoration:  BoxDecoration(
+
           borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(10),
             topRight: Radius.circular(10),
           ),
-          color: Color.fromRGBO(20, 20, 20, 1),
+          color: Colors.grey.withOpacity(0.9),
+
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
