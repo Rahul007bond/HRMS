@@ -15,17 +15,18 @@ class HApptheme{
       // Notice that the counter didn't reset back to zero; the application
       // is not restarted.
         brightness: Brightness.light,
-        primarySwatch: const MaterialColor(0xffff7849,<int,Color>{
-          50: Color(0x1aff7849),
-          100:Color(0x33ff7849),
-          200:Color(0x4dff7849),
-          300:Color(0x66ff7849),
-          400:Color(0x80ff7849),
-          500:Color(0xb3ff7849),
-          600:Color(0xccff7849),
-          700:Color(0xe6ff7849),
-          800:Color(0xf2ff7849),
-          900:Color(0xffff7849),
+        primarySwatch: const MaterialColor(0xff6D6CC0,<int,Color>{
+
+          900:Color(0xff6D6CC0),
+          800:Color(0xe66d6cc0),
+          700:Color(0xcc6d6cc0),
+          600:Color(0xb36d6cc0),
+          500:Color(0x996d6cc0),
+          400:Color(0x806d6cc0),
+          300:Color(0x666d6cc0),
+          200:Color(0x4d6d6cc0),
+          100:Color(0x336d6cc0),
+          50:Color(0x1a6d6cc0),
 
         }),
         inputDecorationTheme: InputDecorationTheme(

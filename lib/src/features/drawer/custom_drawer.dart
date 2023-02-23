@@ -1,6 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:hrms/src/features/attendance/attendance.dart';
+import 'package:hrms/src/features/home_screen/leave.dart';
 
+import '../home_screen/home_screen.dart';
 import 'bottom_user_info.dart';
 import 'custom_list_tile.dart';
 import 'header.dart';
@@ -14,6 +19,40 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer> {
   bool _isCollapsed = false;
+  List<Color> colorList = [
+
+
+    Color(0xff504F8C),
+    Color(0xff504F8C),
+    Color(0xff46457B),
+    Color(0xff46457B),
+    Color(0xff3C3C6A),
+    Color(0xff3C3C6A),
+    Color(0xff323258),
+    Color(0xff323258),
+    Color(0xff323258),
+    Color(0xff282847),
+    Color(0xff282847),
+    Color(0xff1F1E36),
+    Color(0xff1F1E36),
+    Color(0xff151524),
+    Color(0xff151524),
+    Color(0xff0B0B13),
+    Color(0xff0B0B13),
+
+
+  ];
+  List<Alignment> alignmentList = [
+    Alignment.bottomLeft,
+    Alignment.bottomRight,
+    Alignment.topRight,
+    Alignment.topLeft,
+  ];
+  int index = 0;
+  Color bottomColor = Color(0xff0B0B13);
+  Color topColor = Color(0xff6d6cc0);
+  Alignment begin = Alignment.bottomLeft;
+  Alignment end = Alignment.topRight;
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +62,27 @@ class _CustomDrawerState extends State<CustomDrawer> {
         duration: const Duration(milliseconds: 500),
         width: _isCollapsed ? 300 : 70,
         margin: const EdgeInsets.only(bottom: 10, top: 10),
+        onEnd: () {
+          setState(() {
+            index = index + 1;
+            // animate the color
+            bottomColor = colorList[index % colorList.length];
+            topColor = colorList[(index + 1) % colorList.length];
 
+            //// animate the alignment
+            // begin = alignmentList[index % alignmentList.length];
+            // end = alignmentList[(index + 2) % alignmentList.length];
+          });
+        },
         decoration:  BoxDecoration(
 
           borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(10),
             topRight: Radius.circular(10),
           ),
-          color: Colors.grey.withOpacity(0.9),
+
+            gradient: LinearGradient(
+                begin: begin, end: end, colors: [bottomColor, topColor])
 
         ),
         child: Padding(
@@ -43,45 +95,63 @@ class _CustomDrawerState extends State<CustomDrawer> {
               const Divider(
                 color: Colors.grey,
               ),
-              CustomListTile(
-                isCollapsed: _isCollapsed,
-                icon: Icons.home_outlined,
-                title: 'Home',
-                infoCount: 0,
+              InkWell(
+                onTap: (){
+                  Get.to(()=>HomeScreen());
+                },
+                child: IgnorePointer(
+                  child: CustomListTile(
+                    isCollapsed: _isCollapsed,
+                    icon: Icons.home_outlined,
+                    title: 'Home',
+                    infoCount: 0,
+                  ),
+                ),
               ),
-              CustomListTile(
-                isCollapsed: _isCollapsed,
-                icon: Icons.calendar_today,
-                title: 'Calender',
-                infoCount: 0,
-              ),
-              CustomListTile(
-                isCollapsed: _isCollapsed,
-                icon: Icons.pin_drop,
-                title: 'Destinations',
-                infoCount: 0,
-                doHaveMoreOptions: Icons.arrow_forward_ios,
-              ),
-              CustomListTile(
-                isCollapsed: _isCollapsed,
-                icon: Icons.message_rounded,
-                title: 'Messages',
-                infoCount: 8,
-              ),
-              CustomListTile(
-                isCollapsed: _isCollapsed,
-                icon: Icons.cloud,
-                title: 'Weather',
-                infoCount: 0,
-                doHaveMoreOptions: Icons.arrow_forward_ios,
-              ),
-              CustomListTile(
-                isCollapsed: _isCollapsed,
-                icon: Icons.airplane_ticket,
-                title: 'Flights',
-                infoCount: 0,
-                doHaveMoreOptions: Icons.arrow_forward_ios,
-              ),
+          InkWell(
+
+            onTap: (){
+              print('hello');
+              Get.to(()=>Attendance());
+              },
+            child:
+              IgnorePointer(
+                child: CustomListTile(
+                  isCollapsed: _isCollapsed,
+                  icon: Icons.check_circle_outline_outlined,
+                  title: 'Attendance',
+                  infoCount: 0,
+                ),
+              )),
+          InkWell(
+            onTap: (){
+              Get.to(()=>LeaveScreen());
+              },
+            child:
+              IgnorePointer(
+                child: CustomListTile(
+                  isCollapsed: _isCollapsed,
+                  icon: Icons.time_to_leave_outlined,
+                  title: 'Leave',
+                  infoCount: 0,
+
+                ),
+              )),
+          InkWell(
+            onTap: (){
+              Get.to(()=>HomeScreen());
+              },
+            child:
+              IgnorePointer(
+                child: CustomListTile(
+                  isCollapsed: _isCollapsed,
+                  icon: Icons.account_circle_outlined,
+                  title: 'My Profile',
+                  infoCount: 0,
+                ),
+              )),
+
+
               const Divider(color: Colors.grey),
               const Spacer(),
               CustomListTile(

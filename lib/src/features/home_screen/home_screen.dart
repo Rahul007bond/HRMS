@@ -18,7 +18,7 @@ class _HomeScreen extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 
-        backgroundColor: Colors.grey.withOpacity(0.1),
+       
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           elevation: 0,

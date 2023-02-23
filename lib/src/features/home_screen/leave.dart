@@ -20,10 +20,10 @@ class LeaveScreen extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.withOpacity(0.1),
+
       appBar: AppBar(
         leading: BackButton(),
-        backgroundColor: Color(0xFFFF7849),
+
         elevation: 0,
       ),
       body: ListView(
@@ -50,7 +50,7 @@ class LeaveScreen extends StatelessWidget
                   padding: const EdgeInsets.only(top: 10),
                   child: Text('12',style:
                   TextStyle(
-                    color: Color(0xFFFF7849),
+                    color: Color(0xFF6d6cc0),
                     fontSize: 20,
 
                   ),),
@@ -77,7 +77,7 @@ class LeaveScreen extends StatelessWidget
                   padding: const EdgeInsets.only(top: 10),
                   child: Text('3',style:
                   TextStyle(
-                    color: Color(0xFFFF7849),
+                    color: Color(0xFF6d6cc0),
                     fontSize: 20,
 
                   ),),
@@ -102,7 +102,7 @@ class LeaveScreen extends StatelessWidget
                   padding: const EdgeInsets.only(top: 10),
                   child: Text('4',style:
                   TextStyle(
-                    color: Color(0xFFFF7849),
+                    color: Color(0xFF6d6cc0),
                     fontSize: 20,
 
                   ),),
@@ -127,7 +127,7 @@ class LeaveScreen extends StatelessWidget
                   padding: const EdgeInsets.only(top: 10),
                   child: Text('5',style:
                   TextStyle(
-                    color: Color(0xFFFF7849),
+                    color: Color(0xFF6d6cc0),
                     fontSize: 20,
 
                   ),),
@@ -154,7 +154,7 @@ class LeaveScreen extends StatelessWidget
               style: ButtonStyle(
                 shape: MaterialStateProperty.all(CircleBorder()),
                 padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-                backgroundColor: MaterialStateProperty.all(Color(0xFFFF7849)), // <-- Button color
+                backgroundColor: MaterialStateProperty.all(Color(0xFF6d6cc0)), // <-- Button color
                 ),
               onPressed: () =>Get.to(()=>const LeaveForm()),
           ),

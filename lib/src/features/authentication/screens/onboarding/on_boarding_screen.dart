@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:hrms/src/constants/colors.dart';
 import 'package:hrms/src/constants/image_string.dart';
 import 'package:hrms/src/constants/text_strings.dart';
 import 'package:hrms/src/features/authentication/models/model_on_boarding.dart';
+import 'package:hrms/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -51,7 +54,7 @@ class OnBoardingScreen extends StatelessWidget {
           ),
           )),
           Positioned( top:50,right: 20, child: TextButton(
-            onPressed: ()=> onController.skip(),
+            onPressed: ()=> Get.to(()=>WelcomeScreen()),
             child: const Text("Skip", style: TextStyle(color: Colors.grey),),
           )),
 

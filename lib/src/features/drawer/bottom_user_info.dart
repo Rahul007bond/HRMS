@@ -35,7 +35,7 @@ class BottomUserInfo extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
-                          'https://t3.ftcdn.net/jpg/02/99/21/98/360_F_299219888_2E7GbJyosu0UwAzSGrpIxS0BrmnTCdo4.jpg',
+                          'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375__340.png',
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -51,7 +51,7 @@ class BottomUserInfo extends StatelessWidget {
                           child: Align(
                             alignment: Alignment.bottomLeft,
                             child: Text(
-                              'User Name',
+                              'Rahul007',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class BottomUserInfo extends StatelessWidget {
                         ),
                         Expanded(
                           child: Text(
-                            'MEMBER',
+                            'Employee',
                             style: TextStyle(
                               color: Colors.grey,
                             ),
@@ -106,7 +106,7 @@ class BottomUserInfo extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
-                        'https://t3.ftcdn.net/jpg/02/99/21/98/360_F_299219888_2E7GbJyosu0UwAzSGrpIxS0BrmnTCdo4.jpg',
+                        'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375__340.png',
                         fit: BoxFit.cover,
                       ),
                     ),

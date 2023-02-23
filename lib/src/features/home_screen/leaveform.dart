@@ -150,225 +150,227 @@ class _LeaveForm extends State<LeaveForm> {
     return Scaffold(
       appBar: AppBar(
       ), 
-        backgroundColor: Colors.grey.withOpacity(0.1),
+
       body:Container(
         margin: EdgeInsets.all(15),
         color: Colors.white,
         child: Center(
-          child: Column(
-            children: [
-              Container(
-                  padding: EdgeInsets.all(10),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Container(
+                    padding: EdgeInsets.all(10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text('Apply For Leave',style:
+                          TextStyle(
+                            fontSize: 18,
+                          ),),
+                      ],
+                    ),
+                  ),
+                Container(
+                  margin: EdgeInsets.only(top:10,left: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
+                    //crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Apply For Leave',style:
+                      Text('Leave Type',style:
                         TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                         ),),
                     ],
                   ),
                 ),
-              Container(
-                margin: EdgeInsets.only(top:10,left: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  //crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Leave Type',style:
-                      TextStyle(
-                        fontSize: 16,
-                      ),),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 15,top:15),
-                child: Row(
-                  children: [
-                    Container(
+                Container(
+                  margin: EdgeInsets.only(left: 15,top:15),
+                  child: Row(
+                    children: [
+                      Container(
 
-                      child: DropdownButton<String>(
-                        elevation: 20,
-                        // Initial Value
-                        value: dropdownvalue,
-                        // Down Arrow Icon
-                        icon: const Icon(Icons.keyboard_arrow_down),
-                        //isExpanded: true,
-                        // Array list of items
-                        items: items.map((String items) {
-                          return DropdownMenuItem(
-                            value: items,
-                            child: Text(items),
-                          );
-                        }).toList(),
-                        // After selecting the desired option,it will
-                        // change button value to selected value
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            dropdownvalue = newValue!;
-                          });
-                        },
+                        child: DropdownButton<String>(
+                          elevation: 20,
+                          // Initial Value
+                          value: dropdownvalue,
+                          // Down Arrow Icon
+                          icon: const Icon(Icons.keyboard_arrow_down),
+                          //isExpanded: true,
+                          // Array list of items
+                          items: items.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items),
+                            );
+                          }).toList(),
+                          // After selecting the desired option,it will
+                          // change button value to selected value
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              dropdownvalue = newValue!;
+                            });
+                          },
+                        ),
+                        margin: EdgeInsets.only(left: 15),
                       ),
-                      margin: EdgeInsets.only(left: 15),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                //color: Colors.white,
-                margin: EdgeInsets.only(top: 0),
-                padding: EdgeInsets.all(10),
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                          margin: EdgeInsets.only(top:5),
-                          padding: EdgeInsets.only(bottom: 0),
-                          child: Row(
-                            children: [
-                              Text("From ",style:
-                              TextStyle(
-                                fontSize: 16,
-                              ),),
-                            ],
-                          )),
+                Container(
+                  //color: Colors.white,
+                  margin: EdgeInsets.only(top: 0),
+                  padding: EdgeInsets.all(10),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                            margin: EdgeInsets.only(top:5),
+                            padding: EdgeInsets.only(bottom: 0),
+                            child: Row(
+                              children: [
+                                Text("From ",style:
+                                TextStyle(
+                                  fontSize: 16,
+                                ),),
+                              ],
+                            )),
 
-                      TextFormField(
-                        controller: _controller,
-                        decoration: InputDecoration(
-                            labelText: 'Select date',
-                            labelStyle: TextStyle(fontWeight: FontWeight.bold)),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter a date';
-                          }
-                          return null;
-                        },
-                        onTap: () => _selectDateFrom(context),
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(top:5),
-                          padding: EdgeInsets.only(bottom: 0),
-                          child: Row(
-                            children: [
-                              Text("To ",style:
-                              TextStyle(
-                                fontSize: 16,
-                              ),),
-                            ],
-                          )),
-                      TextFormField(
-                        controller: _controller,
-                        decoration: InputDecoration(
-                            labelText: 'Select date',
-                            labelStyle: TextStyle(fontWeight: FontWeight.bold)),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter a date';
-                          }
-                          return null;
-                        },
-                        onTap: () => _selectDateTo(context),
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(top:5),
-                          padding: EdgeInsets.only(bottom: 0),
-                          child: Row(
-                            children: [
-                              Text("Number Of Days",style:
-                              TextStyle(
-                                fontSize: 16,
-                              ),),
-                            ],
-                          )),
-                      TextFormField(
-                        validator: (value){
-                          if(value==null)
+                        TextFormField(
+                          controller: _controller,
+                          decoration: InputDecoration(
+                              labelText: 'Select date',
+                              labelStyle: TextStyle(fontWeight: FontWeight.bold)),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter a date';
+                            }
+                            return null;
+                          },
+                          onTap: () => _selectDateFrom(context),
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(top:5),
+                            padding: EdgeInsets.only(bottom: 0),
+                            child: Row(
+                              children: [
+                                Text("To ",style:
+                                TextStyle(
+                                  fontSize: 16,
+                                ),),
+                              ],
+                            )),
+                        TextFormField(
+                          controller: _controller,
+                          decoration: InputDecoration(
+                              labelText: 'Select date',
+                              labelStyle: TextStyle(fontWeight: FontWeight.bold)),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter a date';
+                            }
+                            return null;
+                          },
+                          onTap: () => _selectDateTo(context),
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(top:5),
+                            padding: EdgeInsets.only(bottom: 0),
+                            child: Row(
+                              children: [
+                                Text("Number Of Days",style:
+                                TextStyle(
+                                  fontSize: 16,
+                                ),),
+                              ],
+                            )),
+                        TextFormField(
+                          validator: (value){
+                            if(value==null)
+                              {
+                                return "Please Enter Number Of Days";
+                              }
+                            else
+                              {
+                                return null;
+                              }
+                          },
+                        ),
+                        Container(
+                            margin: EdgeInsets.only(top:5),
+                            padding: EdgeInsets.only(bottom: 0),
+                            child: Row(
+                              children: [
+                                Text("Remaining Leaves",style:
+                                TextStyle(
+                                  fontSize: 16,
+                                ),),
+                              ],
+                            )),
+                        TextFormField(
+                          validator: (value){
+                            if(value==null)
                             {
                               return "Please Enter Number Of Days";
                             }
-                          else
+                            else
                             {
                               return null;
                             }
-                        },
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(top:5),
-                          padding: EdgeInsets.only(bottom: 0),
-                          child: Row(
-                            children: [
-                              Text("Remaining Leaves",style:
-                              TextStyle(
-                                fontSize: 16,
-                              ),),
-                            ],
-                          )),
-                      TextFormField(
-                        validator: (value){
-                          if(value==null)
-                          {
-                            return "Please Enter Number Of Days";
-                          }
-                          else
-                          {
-                            return null;
-                          }
-                        },
-                      ),
-                      Container(
-                          margin: EdgeInsets.only(top:5),
-                          padding: EdgeInsets.only(bottom: 0),
-                          child: Row(
-                            children: [
-                              Text("Leave Reason",style:
-                              TextStyle(
-                                fontSize: 16,
-                              ),),
-                            ],
-                          )),
-                      TextFormField(
-                        maxLines: 3,
-                        validator: (value){
-                          if(value==null)
-                          {
-                            return "Please Enter Leave Reason";
-                          }
-                          else
-                          {
-                            return null;
-                          }
-                        },
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left:5,top:15),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () => _submit(),
-                              child: Text(
-                                'Submit',
-
-                              ),
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(Color(0xFFFF7849)), // <-- Button color
-                              ),
-                            ),
-                          ],
+                          },
                         ),
-                      )
+                        Container(
+                            margin: EdgeInsets.only(top:5),
+                            padding: EdgeInsets.only(bottom: 0),
+                            child: Row(
+                              children: [
+                                Text("Leave Reason",style:
+                                TextStyle(
+                                  fontSize: 16,
+                                ),),
+                              ],
+                            )),
+                        TextFormField(
+                          maxLines: 3,
+                          validator: (value){
+                            if(value==null)
+                            {
+                              return "Please Enter Leave Reason";
+                            }
+                            else
+                            {
+                              return null;
+                            }
+                          },
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left:5,top:15),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              ElevatedButton(
+                                onPressed: () => _submit(),
+                                child: Text(
+                                  'Submit',
+
+                                ),
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(Color(0xFF6d6cc0)), // <-- Button color
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
 
 
-                    ],
+                      ],
 
+                    ),
                   ),
                 ),
-              ),
 
-            ],
+              ],
+            ),
           ),
         ),
 
@@ -386,7 +388,7 @@ class _LeaveForm extends State<LeaveForm> {
           return Theme(
               data: Theme.of(context).copyWith(
                 colorScheme: ColorScheme.light(
-                  primary: Color(0xffff7849), // <-- SEE HERE
+                  primary: Color(0xFF6d6cc0), // <-- SEE HERE
                   onPrimary: Colors.white, // <-- SEE HERE
                   onSurface: Colors.black, // <-- SEE HERE
                 ),
@@ -415,7 +417,7 @@ class _LeaveForm extends State<LeaveForm> {
           return Theme(
               data: Theme.of(context).copyWith(
                 colorScheme: ColorScheme.light(
-                  primary: Color(0xffff7849), // <-- SEE HERE
+                  primary: Color(0xFF6d6cc0), // <-- SEE HERE
                   onPrimary: Colors.white, // <-- SEE HERE
                   onSurface: Colors.black, // <-- SEE HERE
                 ),

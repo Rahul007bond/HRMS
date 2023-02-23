@@ -20,7 +20,7 @@ class LoginScreen extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(hDefaultSize-5),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+
             children: const [
 
                FormHeaderWidget(
@@ -30,6 +30,7 @@ class LoginScreen extends StatelessWidget {
                  crossAxisAlignment: CrossAxisAlignment.center,
                  heightBetween: hDefaultSize,
                  imageHeight: 0.4,
+
 
                ),
 

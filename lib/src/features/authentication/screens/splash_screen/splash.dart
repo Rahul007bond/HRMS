@@ -1,8 +1,9 @@
 import 'dart:async';
+import 'package:hrms/src/features/authentication/screens/onboarding/on_boarding_screen.dart';
+
 import '../welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:hrms/src/features/authentication/screens/onboarding/on_boarding_screen.dart';
-import '../../../../../main.dart';
+
 
 class SplashScreen extends StatefulWidget{
   const SplashScreen({super.key});
@@ -16,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState(){
     super.initState();
     Timer(const Duration(milliseconds: 1500),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> WelcomeScreen() ));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> OnBoardingScreen() ));
     });
   }
 
