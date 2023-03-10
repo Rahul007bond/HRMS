@@ -17,7 +17,7 @@ class CustomDrawerHeader extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const FlutterLogo(size: 30),
+          Image(image: AssetImage("assets/images/splash/splash2.png",),width: 30, ),
           if (isColapsed) const SizedBox(width: 10),
           if (isColapsed)
             const Expanded(

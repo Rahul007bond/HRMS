@@ -21,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
     controller.startAnimation();
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: const Color(0xffff7849),
+      backgroundColor: const Color(0xff6d6cc0),
       body: Stack(
         children: [
           HFadeInAnimation(

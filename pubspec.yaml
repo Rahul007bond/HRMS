@@ -45,6 +45,10 @@ dependencies:
   circular_chart_flutter: ^0.0.2
   syncfusion_flutter_charts: ^19.1.56
   percent_indicator: ^4.2.2
+  dotted_line: ^3.1.0
+  google_nav_bar: ^5.0.6
+  line_icons: ^2.0.1
+
 
 
 

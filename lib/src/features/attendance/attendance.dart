@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:http/http.dart' as http;
-import '../drawer/custom_drawer.dart';
+
 
 class Attendance extends StatefulWidget {
   const Attendance({super.key});
@@ -19,20 +19,8 @@ class _Attendance extends State<Attendance> {
   // Define an index to track the current color
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-       // backgroundColor: Color(0xf4ffffff),
-        extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          elevation: 0,
-          iconTheme: IconThemeData(color: Colors.white),
-          title: const Text(
-            "Attendance",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-          ),
-        ),
-        drawer: const CustomDrawer(),
-        body: SafeArea(
+    return
+       SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -132,7 +120,7 @@ class _Attendance extends State<Attendance> {
               ],
             ),
           ),
-        ));
+        );
   }
 
   Future<void> _selectDate(BuildContext context) async {

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:hrms/myprofile/page/profile_page.dart';
 import 'package:hrms/src/features/attendance/attendance.dart';
 import 'package:hrms/src/features/home_screen/leave.dart';
 
@@ -111,8 +112,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
           InkWell(
 
             onTap: (){
-              print('hello');
-              Get.to(()=>Attendance());
+
+              Get.to(()=>const Attendance());
               },
             child:
               IgnorePointer(
@@ -139,7 +140,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               )),
           InkWell(
             onTap: (){
-              Get.to(()=>HomeScreen());
+              Get.to(()=>ProfilePage());
               },
             child:
               IgnorePointer(

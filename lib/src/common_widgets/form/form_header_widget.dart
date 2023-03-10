@@ -32,7 +32,7 @@ class FormHeaderWidget extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color:Colors.black87),
+              fontSize: 27, fontWeight: FontWeight.bold, color:Color(0xff6d6cc0)),
         ),
         Text(
           subTitle,textAlign: textAlign,

@@ -8,7 +8,7 @@ class HOutlinedButtonTheme{
   static final outlinedButtonTheme=OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-          foregroundColor: const Color(0xffff7849),
+          foregroundColor: const Color(0xff6d6cc0),
           backgroundColor: Colors.white,
          padding: EdgeInsets.symmetric(vertical: hButtonHeight,)
       )

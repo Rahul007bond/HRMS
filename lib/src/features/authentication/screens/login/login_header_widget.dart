@@ -25,9 +25,9 @@ class LoginHeaderWidget extends StatelessWidget {
         const Text(
           hLoginTitle,
           style: TextStyle(
-              fontSize: 30,
+              fontSize: 27,
               fontWeight: FontWeight.bold,
-              color: Colors.black),
+              color: Color(0xff6d6cc0)),
         ),
         const Text(hLoginSubTitle,
             style: TextStyle(
